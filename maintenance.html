@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة الريان التعليمية - تحت الصيانة</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #667eea;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .message {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .timer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .timer-label {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .timer-display {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+
+        .features {
+            text-align: right;
+            margin: 40px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 15px 0;
+            color: #555;
+        }
+
+        .feature-item .icon-small {
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .contact {
+            background: #e8f4f8;
+            border-right: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: right;
+        }
+
+        .contact p {
+            color: #333;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .social-links {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+
+        .social-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 100%;
+            animation: progress 2s ease-in-out infinite;
+        }
+
+        @keyframes progress {
+            0%, 100% {
+                width: 100%;
+                opacity: 1;
+            }
+            50% {
+                width: 80%;
+                opacity: 0.7;
+            }
+        }
+
+        .footer {
+            color: #999;
+            font-size: 12px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .icon {
+                font-size: 60px;
+            }
+
+            .message {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🔧</div>
+        
+        <h1>منصة الريان التعليمية تحت الصيانة</h1>
+        <div class="subtitle">نحن نعمل على تحسين الخدمة لك</div>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <div class="message">
+            <p>نعتذر عن انقطاع الخدمة المؤقت. فريقنا يعمل جاهداً على تحسين وتطوير المنصة لتقديم تجربة أفضل لك.</p>
+            <p style="margin-top: 15px; color: #667eea; font-weight: 600;">المنصة ستعود قريباً جداً! ⏰</p>
+        </div>
+
+        <!-- <div class="timer">
+            <div class="timer-label">الوقت المتبقي للعودة</div>
+            <div class="timer-display" id="countdown">جاري التحديث...</div>
+        </div>
+
+        <div class="features">
+            <div class="feature-item">
+                <span class="icon-small">✅</span>
+                <span>تحسينات أداء الموقع</span>
+            </div>
+            <div class="feature-item">
+                <span class="icon-small">✅</span>
+                <span>إضافة ميزات جديدة</span>
+            </div>
+            <div class="feature-item">
+                <span class="icon-small">✅</span>
+                <span>تحديثات أمان محسّنة</span>
+            </div>
+            <div class="feature-item">
+                <span class="icon-small">✅</span>
+                <span>سرعة استجابة أفضل</span>
+            </div>
+        </div> -->
+
+        <div class="contact">
+            <p><strong>هل لديك أي استفسارات؟</strong></p>
+            <!-- <p>البريد الإلكتروني: <a href="mailto:support@ahmed-alrayan.com" style="color: #667eea; text-decoration: none;">support@ahmed-alrayan.com</a></p> -->
+            <p>الهاتف: <a href="tel:+201141283149" style="color: #667eea; text-decoration: none;">+201141283149</a></p>
+        </div>
+
+        <!-- <div class="social-links">
+            <a href="https://facebook.com" class="social-link" title="Facebook">f</a>
+            <a href="https://twitter.com" class="social-link" title="Twitter">𝕏</a>
+            <a href="https://instagram.com" class="social-link" title="Instagram">📷</a>
+            <a href="https://whatsapp.com" class="social-link" title="WhatsApp">💬</a>
+        </div> -->
+
+        <div class="footer">
+            <p>© 2026 منصة الريان التعليمية - جميع الحقوق محفوظة</p>
+        </div>
+    </div>
+
+    <script>
+        // عداد التنازل (Countdown Timer)
+        function updateCountdown() {
+            // اضبط الوقت المتوقع للعودة (غيّر الساعة إلى وقتك المتوقع)
+            const returnTime = new Date();
+            returnTime.setHours(returnTime.getHours() + 2); // العودة بعد ساعتين
+            
+            function calculate() {
+                const now = new Date().getTime();
+                const distance = returnTime.getTime() - now;
+
+                if (distance < 0) {
+                    document.getElementById('countdown').innerHTML = 'نحن هنا الآن! يرجى تحديث الصفحة';
+                    return;
+                }
+
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown').innerHTML = 
+                    `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            }
+
+            calculate();
+            setInterval(calculate, 1000);
+        }
+
+        updateCountdown();
+
+        // تحديث الصفحة تلقائياً كل 30 ثانية
+        setTimeout(() => {
+            location.reload();
+        }, 30000);
+    </script>
+</body>
+</html>
